@@ -10,7 +10,14 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 project(phmap VERSION ${DETECTED_PHMAP_VERSION} LANGUAGES CXX)
 
-set(PHMAP_HEADERS phmap.h phmap_base.h phmap_bits.h phmap_utils.h phmap_config.h)
+set(PHMAP_HEADERS
+    ${CMAKE_CURRENT_SOURCE_DIR}/phmap.h
+    ${CMAKE_CURRENT_SOURCE_DIR}/phmap_base.h
+    ${CMAKE_CURRENT_SOURCE_DIR}/phmap_bits.h
+    ${CMAKE_CURRENT_SOURCE_DIR}/phmap_utils.h
+    ${CMAKE_CURRENT_SOURCE_DIR}/phmap_config.h
+)
+
 set(PHMAP_DIR parallel_hashmap)
 set(CMAKE_SUPPRESS_REGENERATION true)            ## suppress ZERO_CHECK project
 
